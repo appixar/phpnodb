@@ -5,6 +5,7 @@
     "keywords": ["no database", "nodb", "array handler", "json handler"],
     "homepage": "https://appixar.com",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [{
         "name": "J. W. Balaniuc",
         "email": "joao@appixar.com",
