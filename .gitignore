@@ -9,9 +9,10 @@
 
 # JW #
 ######################
-*scss*
+*.scss
 *backup*
 *copy*
+*scss*
 
 # Packages #
 ############
