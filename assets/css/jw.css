@@ -23,6 +23,67 @@ h4 {
     color: #544451;
 }
 
+input.copy {
+    float: right;
+    max-width: 35%;
+    text-align: right;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: .75rem;
+    border: 0 !important;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+input.copy:focus {
+    outline: none;
+}
+
+code,
+code *,
+#json {
+    text-align: left !important;
+    font-family: monospace;
+    background: none !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    border: 0 !important;
+}
+
+.hljs-string {
+    color: #d63384 !important;
+}
+
+.hljs-punctuation {
+    color: #17aca1 !important;
+}
+
+.hljs-attr {
+    color: #6c757d !important;
+}
+
+.alert-sm {
+    font-size: 14px !important;
+    padding: 10px !important;
+}
+
+.disabled {
+    font-weight: bold
+}
+
+.nav-link.active {
+    font-weight: bold !important;
+    border-bottom: 2px solid #17aca1;
+    color: #17aca1 !important;
+    display: inline-block;
+}
+
+.dropdown-item,
+.nav-link {
+    font-weight: 100 !important;
+}
+
 .btn-primary,
 .btn-primary:hover {
     color: #fff;
@@ -46,5 +107,39 @@ h4 {
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
+    }
+}
+
+.trumbowyg-box,
+.trumbowyg-editor {
+    min-height: 150px;
+}
+
+
+/* Fixes dropdown menus placed on the right side */
+
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    right: 0px;
+}
+
+
+/* Nav */
+
+.navbar-brand {
+    font-size: 1rem;
+}
+
+.nav-item i {
+    width: 18px;
+}
+
+.sm {
+    display: none;
+}
+
+@media (max-width: 978px) {
+    .sm {
+        display: inline-block !important;
     }
 }
