@@ -1,4 +1,7 @@
-<form action='pages/page.post.php' method='post'>
+<form action='pages/page.post.php' method='post' enctype='multipart/form-data'>
+
+    <input type='hidden' name='target' value='data' />
+
     <div class="accordion mb-4">
 
         <?php

@@ -28,7 +28,7 @@ else {
     <meta name="description" content="">
     <meta name="author" content="J. W. Balaniuc">
     <meta http-equiv="Pragma" content="no-cache">
-    <title>NoDB · <?= $_title ?></title>
+    <title><?= $conf_id['sys_name'] ?> | NoDB · <?= $_title ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/custom.css" rel="stylesheet">

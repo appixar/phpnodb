@@ -1,4 +1,7 @@
-<form action='pages/config.post.php' method='post'>
+<form action='pages/page.post.php' method='post' enctype='multipart/form-data'>
+
+    <input type='hidden' name='target' value='conf' />
+
     <div class="accordion mb-4">
 
         <div class="accordion-item">
@@ -9,7 +12,6 @@
             </h2>
             <div id="collapse_0" class="accordion-collapse collapse show" aria-labelledby="heading_0">
                 <div class="accordion-body">
-
                     <?php
                     // sub foreach to get data
                     foreach ($conf as $k_ => $v_) {
@@ -18,20 +20,14 @@
                         // ... and save others in hidden
                         //=====================================
                         $label = $k_;
-                        $id = '';
-                        if (is_array($v_)) {
-                            $type = $v_['type'];
-                            $value = $v_['value'];
-                            $id = $v_['id'];
-                            // save others in hidden
-                            foreach ($v_ as $k__ => $v__) {
-                                if ($k__ != "value") {
-                                    echo "<input type='hidden' name='[{$k_}][{$k__}]' value='$v__' />";
-                                }
+                        $type = $v_['type'];
+                        $value = $v_['value'];
+                        $id = $v_['id'];
+                        // save others in hidden
+                        foreach ($v_ as $k__ => $v__) {
+                            if ($k__ != "value") {
+                                echo "<input type='hidden' name='{$k_}[{$k__}]' value='$v__' />";
                             }
-                        } else {
-                            $type = "";
-                            $value = $v_;
                         }
                         // copy & popover (tooltip)
                         $popover = '';
@@ -70,11 +66,12 @@
                             elseif ($type == "image") {
                                 $r = rand(111111, 999999);
                             ?>
+                                <input type='hidden' name='<?= $k_ ?>[value]' value='<?= $value ?>'>
                                 <label class='mb-3'><?= $label ?></label>
                                 <?= $popover ?>
                                 <br />
                                 <a href='<?= $value ?>' target='_blank'><img src='<?= $value ?>' class='mb-3' style='max-width:256px;max-height:128px;' /></a><br />
-                                <input class="form-control" type="file">
+                                <input class='form-control' type='file' accept='image/'>
                             <?php
                             }
                             //=====================================
@@ -84,7 +81,7 @@
                             ?>
                                 <label class="form-label"><?= $label ?></label>
                                 <?= $popover ?>
-                                <input name='<?= $k_ ?>' type="text" class="form-control" placeholder="<?= $k_ ?>" value="<?= $value ?>">
+                                <input name='<?= $k_ ?>[value]' type="text" class="form-control" placeholder="<?= $k_ ?>" value="<?= $value ?>">
                             <?php } ?>
                         </div>
                     <?php

@@ -30,13 +30,13 @@ if ($p != "cb") {
 }
 
 // GET CURRENT PAGE TITLE
+$page = '';
 $x = 0;
 foreach ($data as $k => $v) {
     $x++;
-    if ((!$p and $x == 1) or $p == $x) {
-        $page = "> $k";
-    }
+    if ((!$p and $x == 1) or $p == $x) $page = $k;
 }
+if (!$page) $page = ucfirst($p);
 
 ?>
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ foreach ($data as $k => $v) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="J. W. Balaniuc">
-    <title>NoDB · Editor <?= $page ?></title>
+    <title><?= $conf_id['sys_name'] ?> · NoDB / <?= $page ?></title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="assets/img/logo-ico32.png" />
@@ -96,7 +96,7 @@ foreach ($data as $k => $v) {
                 <div class="container-fluid">
                     <a class="navbar-brand" href="./">
                         <img src="assets/img/logo.png" alt="" width="48">
-                        &nbsp; Qmoleza <span class='sm text-muted'> <?= $page ?></span>
+                        &nbsp; <?= $conf_id['sys_name'] ?> <span class='sm text-muted'> <?= $page ?></span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
