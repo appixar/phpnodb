@@ -1,0 +1,26 @@
+{
+    "Definições": {
+        "Nome do site": {
+            "id": "sys_name",
+            "value": "My Site"
+        },
+        "URL do site": {
+            "id": "sys_url",
+            "value": "https://domain.com"
+        },
+        "Logo NoDB": {
+            "id": "sys_logo",
+            "type": "image",
+            "value": "assets/img/logo.png",
+            "value_default": "assets/img/logo.png"
+        },
+        "Upload: Tamanho máximo por arquivo (MB)": {
+            "id": "sys_up_maxsize",
+            "value": "2"
+        },
+        "Upload: Máximo de imagens": {
+            "id": "sys_up_maxcount",
+            "value": "30"
+        }
+    }
+}

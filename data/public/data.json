@@ -1,0 +1,48 @@
+{
+    "Home": {
+        "Dados gerais": {
+            "Conteúdo da Página": {
+                "id": "quem_somos",
+                "type": "textarea",
+                "value": "<strong>teste</strong>"
+            },
+            "Titulo da Pagina": "DoctorCash - Curso de Gestão Financeira para Dentistas",
+            "Valor a vista": "R$ 497,00",
+            "Valor a prazo": "ou 12x R$ 49,00",
+            "WhatsApp": "27999034646",
+            "E-mail": "contato@doctorcash.com.br",
+            "Link do Checkout": "https:\/\/sun.eduzz.com\/961009",
+            "Teste": {
+                "id": "teste",
+                "type": "checkbox",
+                "value": true
+            }
+        },
+        "Teste 2": {
+            "Teste 3": "blau"
+        },
+        "Banners": [{
+            "Texto": "blau",
+            "Imagem": {
+                "type": "image",
+                "value": "data/upload/qoDBRO7mpHbL.jpg"
+            }
+        }, {
+            "Texto": "bléu",
+            "Imagem": {
+                "type": "image",
+                "value": "data/upload/qoDBRO7mpHbL.jpg"
+            }
+        }]
+    },
+    "Quem somos?": {
+        "Dados gerais": {
+            "Teste": "blau",
+            "Banner": {
+                "id": "qs_banner",
+                "type": "image",
+                "value": "assets/img/banner.png"
+            }
+        }
+    }
+}
