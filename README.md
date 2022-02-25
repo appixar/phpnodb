@@ -27,8 +27,8 @@ A senha do Desenvolvedor possui privilégios para alterar a estrutura dos dados 
 - **site_directory/index.php**
 ```
 <?php
-// Obter dados de phpNoDB
-$data = json_decode(file_get_contents('./phpnodb/data/public/data.json'), true);
+// Incluir dados de phpNoDB
+include "phpnodb/global.php"; // Agora array $data contém todos os dados dinâmicos do site
 ?>
 
 <!-- Estrutura do site original -->

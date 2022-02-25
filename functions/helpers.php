@@ -55,7 +55,7 @@ function getIp()
     return $ip;
 }
 
-function getDataById($array)
+function phpNoDB($array)
 {
     $return = array();
     // Home

@@ -1,6 +1,7 @@
 <?php
 // global
 include "global.php";
+
 // dev?
 if ($_GET['dev']) {
     $_title = "Identifique-se (Dev)";
