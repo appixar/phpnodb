@@ -12,11 +12,11 @@ phpNoDB é o CMS para sites PHP sem banco de dados. As informações são gerenc
 cd site_directory/
 git clone https://github.com/appixar/phpnodb.git
 ```
-**É aconselhável alterar o nome do diretório /phpnodb para um nome secreto que só você e o seu cliente conhecem.**
+> **IMPORTANTE**: É aconselhável alterar o nome do diretório /phpnodb para um nome secreto que só você e o seu cliente conhecem.
 
 ## Acessando painel administrativo
 
-Após instalado, basta acessar: http://seu_site.com/phpnodb/
+Após instalado, basta acessar pelo navegador: **seusite.com/phpnodb**
 
 ## Estrutura do site com phpNoDB
 
