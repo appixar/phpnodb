@@ -58,8 +58,13 @@ include "phpnodb/global.php"; // Agora array $data contém todos os dados dinâm
             "Quem somos?": "Uma família feliz :)"
         }
     }
-
-# Formato gerado para exibição no site:
-# $data['titulo']
-# $data['Home']['Dados gerais']['Quem somos?']
+#--------------------------------------------------------------
+# Formatos gerados para exibição no site:
+#
+#   $data['titulo']
+#     Possui id, logo pode ser acessado através do atalho.
+#
+#   $data['Home']['Dados gerais']['Quem somos?']
+#     Não possui id, deve ser acessado pelo caminho completo.
+#--------------------------------------------------------------
 ```
