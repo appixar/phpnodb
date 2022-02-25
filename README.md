@@ -46,7 +46,9 @@ include "phpnodb/global.php"; // Agora array $data contém todos os dados dinâm
 ## Configuração dos dados dinâmicos
 - **site_directory/phpnodb/data/public/data.json**
 ```
-# Exemplo 1:
+#--------------------------------------------------------------
+# Exemplo:
+#--------------------------------------------------------------
 {
     "Home": {
         "Dados gerais": {
@@ -58,6 +60,7 @@ include "phpnodb/global.php"; // Agora array $data contém todos os dados dinâm
             "Quem somos?": "Uma família feliz :)"
         }
     }
+}
 #--------------------------------------------------------------
 # Formatos gerados para exibição no site:
 #
