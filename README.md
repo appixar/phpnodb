@@ -24,7 +24,7 @@ A senha do Desenvolvedor possui privilégios para alterar a estrutura dos dados 
 
 ## Estrutura do site com phpNoDB
 
-**site_directory/index.php**
+- **site_directory/index.php**
 ```
 <?php
 // Obter dados de phpNoDB
@@ -44,7 +44,7 @@ $data = json_decode(file_get_contents('./phpnodb/data/public/data.json'), true);
 ```
 
 ## Configuração dos dados dinâmicos
-**site_directory/phpnodb/data/public/data.json**
+- **site_directory/phpnodb/data/public/data.json**
 ```
 # Exemplo 1:
 {
@@ -59,7 +59,7 @@ $data = json_decode(file_get_contents('./phpnodb/data/public/data.json'), true);
         }
     }
 
-# Resultados:
+# Formato gerado para exibição no site:
 # $data['titulo']
 # $data['Home']['Dados gerais']['Quem somos?']
 ```
