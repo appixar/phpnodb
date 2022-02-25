@@ -1,6 +1,6 @@
 # phpNoDB
 
-phpNoDB é o CMS para sites PHP sem banco de dados. As informações são gerenciadas através de um painel adminstrativo simples e intuitivo, e os dados ficam armazenadas no sistema de arquivos do site.
+phpNoDB é o CMS para sites PHP sem banco de dados. As informações são gerenciadas através de um painel adminstrativo simples e intuitivo, e os dados dinâmicos do site ficam armazenadas no sistema de arquivos em formato JSON.
 
 ## Pré-requisitos
 
@@ -17,6 +17,10 @@ git clone https://github.com/appixar/phpnodb.git
 ## Acessando painel administrativo
 
 Após instalado, basta acessar pelo navegador: **seusite.com/phpnodb**
+
+Você deverá criar uma senha para uso do Desenvolvedor, e outra para uso do Cliente.
+
+A senha do Desenvolvedor possui privilégios para alterar a estrutura dos dados JSON.
 
 ## Estrutura do site com phpNoDB
 
