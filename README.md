@@ -41,3 +41,24 @@ $data = json_decode(file_get_contents('./phpnodb/data/public/data.json'), true);
     <p>Total de lucros gerados no último mês: <?= $data['lucro'] ?></p>
     ...
 ```
+
+## Estrutura dos dados dinâmicos
+
+```
+# Exemplo 1:
+{
+    "Home": {
+        "Dados gerais": {
+            "Título da Página": {
+                "id": "titulo",
+                "type": "text",
+                "value": "<strong>teste</strong>"
+            },
+            "Quem somos?": "Uma família feliz :)"
+        }
+    }
+
+# Resultados:
+# $data['titulo']
+# $data['Home']['Dados gerais']['Quem somos?']
+```
