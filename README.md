@@ -34,7 +34,7 @@ include "phpnodb/global.php"; // Agora array $data contém todos os dados dinâm
 <!-- Estrutura do site original -->
 <html>
 <head>
-    // Inserir dados na página
+    // Mostrar dados na página
     <title><?= $data['titulo'] ?><title>
 </head>
 <body>
