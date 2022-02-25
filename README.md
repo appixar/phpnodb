@@ -1,4 +1,4 @@
-# Hello world
+# phpNoDB Light CMS
 
 ```
 // Obter dados de phpNoDB
