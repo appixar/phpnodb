@@ -1,4 +1,4 @@
-# phpNoDB - Filesystem Database CMS
+# phpNoDB
 
 ```
 // Obter dados de phpNoDB
