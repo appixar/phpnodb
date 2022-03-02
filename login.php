@@ -29,7 +29,7 @@ else {
     <meta name="description" content="">
     <meta name="author" content="J. W. Balaniuc">
     <meta http-equiv="Pragma" content="no-cache">
-    <title><?= $conf_id['sys_name'] ?> · NoDB Login</title>
+    <title>[NoDB] <?= $conf['sys_name'] ?> · Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/custom.css" rel="stylesheet">

@@ -184,9 +184,11 @@ class arrayEditor
             $name_var = str_replace("[", "['", $name_var);
             $name_var = str_replace("]", "']", $name_var);
             $name_var = str_replace("''", $array_id, $name_var);
-            //
-            if (!$id) $copy = '$nodb' . $name_var;
-            else $copy = '$nodb' . "['$id']";
+            // id area (auto scroll)
+            $this->html .= "<div id='goto_$id'>";
+            // copy
+            if (!$id) $copy = '<?= $data' . $name_var . ' ?>';
+            else $copy = '<?= $data' . "['$id'] ?>";
             $this->html .= '<input type="text" readonly="true" class="copy text-secondary" value="' . $copy . '" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Copiado" />';
         }
         //=====================================
@@ -205,6 +207,7 @@ class arrayEditor
         // text
         //=====================================
         else $this->inputText($label, $value, $name);
+        $this->html .= "</div>";
     }
     private function inputCheckbox($label, $value, $name)
     {

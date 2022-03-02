@@ -87,7 +87,7 @@ function cleanData($array)
 {
 
     $data_array = array();
-    $tags = '<p><a><div><span><strong><em>';
+    $tags = '<p><a><u><i><div><span><strong><em><br><script><h1><h2><h3><h4><h5><ul><li><noscript><img><small><main><nav><footer><iframe>';
     // key = Home
     foreach ($array as $k0 => $v0) {
         $k0 = str_replace("_", " ", $k0); // fix spaces

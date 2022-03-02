@@ -31,7 +31,7 @@
                 <div class='mmb-4'>
                     <p><span class='badge rounded-pill bg-light text-dark'><?= $size ?></span></p>
                     <!--<a href='#' class='btn btn-sm btn-info'><i class='fa fa-copy'></i></a>-->
-                    <a href='#' class='image-del btn btn-sm btn-secondary' data-fn='{$files[$i]}'><i class='fa fa-times'></i></a>
+                    <a href='#' class='image-del btn btn-sm btn-secondary' data-fn='<?= $files[$i] ?>'><i class='fa fa-times'></i></a>
                 </div>
             <?php
             } // gallery

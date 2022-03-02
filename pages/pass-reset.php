@@ -13,7 +13,7 @@
                         Tem certeza que deseja gerar uma nova senha temporária para o cliente?
                     </p>
                     <p>
-                        <a href='pages/_run/reset_password_cli.php' class="btn btn-primary btn-md" style='display:inline-block'>
+                        <a href='pages/pass-reset.post.php' class="btn btn-primary btn-md" style='display:inline-block'>
                             <i class='fa fa-asterisk'></i> Gerar senha temporária
                         </a>
                     </p>

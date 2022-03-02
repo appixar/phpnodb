@@ -1,7 +1,7 @@
 <?php
 $total = intval(count(scandir('data/upload/')) - 2);
 $_disabled = "";
-if ($conf_id['sys_up_maxcount'] <= $total) {
+if ($conf['sys_up_maxcount'] <= $total) {
     $_disabled = "disabled";
     $_SESSION['cb']['type'] = 'warning';
     $_SESSION['cb']['text'] = 'O limite de imagens foi atingido.';

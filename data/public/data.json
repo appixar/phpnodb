@@ -1,47 +1,308 @@
 {
     "Home": {
-        "Dados gerais": {
-            "Conteúdo da Página": {
-                "id": "quem_somos",
-                "type": "textarea",
-                "value": "<strong>teste</strong>"
+        "Defini\u00e7\u00f5es": {
+            "T\u00edtulo do Site": {
+                "id": "titulo",
+                "value": "AlienRico - IA de apostas esportivas"
             },
-            "Titulo da Pagina": "DoctorCash - Curso de Gestão Financeira para Dentistas",
-            "Valor a vista": "R$ 497,00",
-            "Valor a prazo": "ou 12x R$ 49,00",
-            "WhatsApp": "27999034646",
-            "E-mail": "contato@doctorcash.com.br",
-            "Link do Checkout": "https:\/\/sun.eduzz.com\/961009",
-            "Teste": {
-                "id": "teste",
+            "Habilitar Jivochat": {
+                "id": "jivochat",
                 "type": "checkbox",
-                "value": true
+                "value": "false"
             }
         },
-        "Teste 2": {
-            "Teste 3": "blau"
+        "Links": {
+            "Link do Whatsapp": {
+                "id": "wapp",
+                "value": "https:\/\/wa.me\/5511999889963"
+            },
+            "Link do Instagram": {
+                "id": "insta",
+                "value": "https:\/\/instagram.com\/alienricoo"
+            },
+            "Link do Telegram": {
+                "id": "telegram",
+                "value": "https:\/\/t.me\/freealienrico"
+            },
+            "Link da Pinnacle": {
+                "id": "pinnacle",
+                "value": "https:\/\/wlpinnacle.adsrv.eacdn.com\/C.ashx?btag=a_23491b_16977c_&affid=21067&siteid=23491&adid=16977&c="
+            },
+            "C\u00f3digo Pixel do Facebook": {
+                "id": "pixel",
+                "value": "\u003Cscript\u003E! function(f, b, e, v, n, t, s){if (f.fbq) return; n=f.fbq=function(){n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)}; if (!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[]; t=b.createElement(e); t.async=!0; t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)}(window, document, 'script', 'https:\/\/connect.facebook.net\/en_US\/fbevents.js'); fbq('init', '4708134265908059'); fbq('track', 'PageView'); \u003C\/script\u003E \u003Cnoscript\u003E\u003Cimg height='1' width='1' style='display:none' src='https:\/\/www.facebook.com\/tr?id=4708134265908059&ev=PageView&noscript=1'\/\u003E\u003C\/noscript\u003E "
+            }
         },
-        "Banners": [{
-            "Texto": "blau",
-            "Imagem": {
-                "type": "image",
-                "value": "data/upload/qoDBRO7mpHbL.jpg"
+        "Se\u00e7\u00e3o Principal": {
+            "Copy 01": {
+                "id": "home1",
+                "value": "Comece a lucrar hoje!"
+            },
+            "Copy 02": {
+                "id": "home2",
+                "value": "IA de apostas esportivas"
+            },
+            "Copy 03": {
+                "id": "home3",
+                "type": "textarea",
+                "value": "O segredo foi revelado! Voc\u00ea tamb\u00e9m pode viver de apostas, \u003Cstrong\u003Epor apenas R$ 57,00\u003C\/strong\u003E"
+            }
+        },
+        "P\u00e1gina de Obrigado": {
+            "Resumo": {
+                "id": "thanks1",
+                "value": "Falta pouco!"
+            },
+            "T\u00edtulo": {
+                "id": "thanks2",
+                "value": "Siga os passos para receber as apostas no seu WhatsApp"
+            },
+            "Conte\u00fado": {
+                "id": "thanks3",
+                "type": "textarea",
+                "value": "\u003Cul\u003E\u003Cli\u003EAdicione o n\u00famero 011 9 9988-9963 (Alien Rico)\u003C\/li\u003E\u003Cli\u003EEnvie uma mensagem com o seu email usado na compra\u003C\/li\u003E\u003Cli\u003EAguarde o nosso time confirmar sua compra e te dar OK\u003C\/li\u003E\u003Cli\u003EPronto, voc\u00ea j\u00e1 vai come\u00e7ar a receber as apostas no seu Whatsapp\u003C\/li\u003E\u003C\/ul\u003E"
+            }
+        }
+    },
+    "Como funciona?": {
+        "Se\u00e7\u00e3o": {
+            "Resumo": {
+                "id": "how1",
+                "value": "Apostas analisadas por intelig\u00eancia artificial"
+            },
+            "T\u00edtulo": {
+                "id": "how2",
+                "value": "Como AlienRico funciona?"
+            },
+            "Descri\u00e7\u00e3o": {
+                "id": "how3",
+                "type": "textarea",
+                "value": "N\u00f3s assinamos os melhores tipsters (apostadores profissionais) do mundo. As apostas s\u00e3o analisadas por IA, e as melhores s\u00e3o enviadas a voc\u00ea."
+            },
+            "C\u00f3digo do Youtube V\u00eddeo": {
+                "id": "how.video",
+                "value": "v1TLRHEktIk"
+            }
+        },
+        "Estat\u00edsticas": {
+            "Dado 01": {
+                "id": "stats1",
+                "value": "8.085,5%"
+            },
+            "Texto 01": {
+                "id": "stats1.txt",
+                "value": "Lucro nos \u00faltimos 6 meses\u003Cbr\u003E\u003Csmall\u003E(sobre o valor do Stake fixo)\u003C\/small\u003E"
+            },
+            "Dado 02": {
+                "id": "stats2",
+                "value": "68%"
+            },
+            "Texto 02": {
+                "id": "stats2.txt",
+                "value": "Hist\u00f3rico de acerto"
+            },
+            "Dado 03": {
+                "id": "stats3",
+                "value": "1.392"
+            },
+            "Texto 03": {
+                "id": "stats3.txt",
+                "value": "Clientes satisfeitos"
+            }
+        },
+        "Informa\u00e7\u00f5es complementares": {
+            "Resumo": {
+                "id": "comp1",
+                "value": "Deixe o trabalho duro pra n\u00f3s!"
+            },
+            "T\u00edtulo": {
+                "id": "comp2",
+                "value": "Lucros de outro mundo!"
+            },
+            "Descri\u00e7\u00e3o": {
+                "id": "comp3",
+                "type": "textarea",
+                "value": "Com AlienRico voc\u00ea tem a chance de viver de apostas esportivas! Milhares de pessoas j\u00e1 comprovaram a efic\u00e1cia dos nossos m\u00e9todos... vai ficar de fora?"
+            },
+            "Quadro 01": {
+                "id": "comp.info1",
+                "value": "Degusta\u00e7\u00e3o gr\u00e1tis 7 dias"
+            },
+            "Quadro 02": {
+                "id": "comp.info2",
+                "value": "Chance de viver de apostas"
+            },
+            "Quadro 03": {
+                "id": "comp.info3",
+                "value": "IA trabalhando pra voc\u00ea"
+            },
+            "Quadro 04": {
+                "id": "comp.info4",
+                "value": "Tipsters trabalhando pra voc\u00ea"
+            }
+        }
+    },
+    "Vale a pena?": {
+        "Se\u00e7\u00e3o": {
+            "Resumo": {
+                "id": "vale1",
+                "value": "N\u00e3o tem desculpa!"
+            },
+            "T\u00edtulo": {
+                "id": "vale2",
+                "value": "AlienRico vale a pena?"
+            },
+            "Descri\u00e7\u00e3o": {
+                "id": "vale3",
+                "type": "textarea",
+                "value": "Com AlienRico voc\u00ea \u003Cstrong\u003EN\u00c3O precisa\u003C\/strong\u003E ser um especialista e muito menos um apostador profissional. \u00c9 simples, barato e lucrativo."
+            },
+            "Info 01": {
+                "id": "vale.info1",
+                "type": "textarea",
+                "value": "\u003Ch5\u003ETipsters profissionais\u003C\/h5\u003E\u003Cp\u003EN\u00f3s assinamos os maiores profissionais do mercado e enviamos as melhores apostas deles pra voc\u00ea.\u003C\/p\u003E"
+            },
+            "Info 02": {
+                "id": "vale.info2",
+                "type": "textarea",
+                "value": "\u003Ch5\u003EIA poderosa\u003C\/h5\u003E\u003Cp\u003ENosso algoritmo analisa milh\u00f5es de dados para cada investimento e seleciona as melhores apostas.\u003C\/p\u003E"
+            },
+            "Info 03": {
+                "id": "vale.info3",
+                "type": "textarea",
+                "value": "\u003Ch5\u003EInvestimento baix\u00edssimo\u003C\/h5\u003E\u003Cp\u003EAlienRico n\u00e3o \u00e9 custo, \u00e9 investimento. Pode comparar, n\u00f3s temos o melhor custo benef\u00edcio do mercado!\u003C\/p\u003E"
+            }
+        }
+    },
+    "FAQ": {
+        "Se\u00e7\u00e3o": {
+            "Resumo": {
+                "id": "faq1",
+                "value": "Perguntas comuns"
+            },
+            "T\u00edtulo": {
+                "id": "faq2",
+                "value": "Tire todas as suas d\u00favidas"
+            },
+            "Descri\u00e7\u00e3o": {
+                "id": "faq3",
+                "type": "textarea",
+                "value": "Se n\u00e3o encontrou o que procura, \u003Ca href='https:\/\/wa.me\/5511999889963' target='_blank'\u003E\u003Cu\u003Efale com um especalista\u003C\/u\u003E\u003C\/a\u003E"
+            }
+        },
+        "Perguntas e respostas": [{
+            "Pergunta": "Quais s\u00e3o os profissionais que voc\u00eas assinam?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "\u003Cp\u003EAtualmente n\u00f3s assinamos 4 profissionais, estes n\u00e3o s\u00e3o os primeiros e nem ser\u00e3o os \u00faltimos a estarem dentro do algoritmo. N\u00f3s mantemos os nomes deles em sigilo.\u003C\/p\u003E\u003Cp\u003ETamb\u00e9m temos acesso a uma plataforma com diversos apostadores profissionais e amadores onde l\u00e1, nosso algoritmo busca tips id\u00eanticas as dos nossos profissionais e quando encontra, gera um \u201cpeso\u201d a mais para aquela entrada.\u003C\/p\u003E\u003Cp\u003EPense bem: Se mais de um profissional est\u00e1 indicando aquela aposta, ela tende a ser um bom investimento... Mas n\u00e3o se engane, isso n\u00e3o basta para que o algoritmo libere a entrada, muitos outros fatores s\u00e3o relevantes.\u003C\/p\u003E"
             }
         }, {
-            "Texto": "bléu",
-            "Imagem": {
-                "type": "image",
-                "value": "data/upload/qoDBRO7mpHbL.jpg"
+            "Pergunta": "Existe algum rob\u00f4 pra fazer as apostas automaticamente?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "\u003Cp\u003EN\u00e3o, por enquanto voc\u00ea precisa efetuar a aposta manualmente em um site oficial de apostas. Nossa equipe tem projeto pra este produto, mas ainda n\u00e3o oferecemos esse servi\u00e7o, visto que as casas de apostas mais confi\u00e1veis n\u00e3o aceitam esse tipo de integra\u00e7\u00e3o.\u003C\/p\u003E"
+            }
+        }, {
+            "Pergunta": "Como o Algoritmo funciona?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "\u003Cp\u003EObviamente isso essa \u00e9 uma pergunta muito complexa para ser respondida, mas vamos l\u00e1:\u003C\/p\u003E\u003Cp\u003EN\u00f3s assinamos as tips de diversos profissionais ao redor do mundo, garimpamos os melhores, com resultados mais positivos.\u003C\/p\u003E\u003Cp\u003EAssim que eles mandam uma entrada pra gente, nosso time passa essa entrada pelo nosso algoritmo.\u003C\/p\u003E\u003Cp\u003EEle analisa mais de 40 dados baseados no hist\u00f3rico daquele profissional que nos enviou a aposta, e dentro desses dados, outros milhares de fatores, e dessa forma o algoritmo me fala se aquela aposta espec\u00edfica de HOJE a chance de vencermos \u00e9 boa ou n\u00e3o.\u003C\/p\u003E"
+            }
+        }, {
+            "Pergunta": "Qual a m\u00e9dia de lucro mensal?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "A m\u00e9dia de lucro mensal desde o in\u00edcio do projeto (2018) \u00e9 de 21%."
+            }
+        }, {
+            "Pergunta": "Voc\u00eas j\u00e1 tiveram meses negativos?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "\u003Cp\u003EApostas esportivas s\u00e3o uma modalidade de investimento de alto risco. \u00c9 matematicamente imposs\u00edvel eliminar este risco em 100%, mas nosso Algoritmo tem como objetivo \u003Cstrong\u003Ereduzi-lo drasticamente.\u003C\/strong\u003E\u003C\/p\u003E\u003Cp\u003EHistoricamente, nunca tivemos 2 meses seguidos de preju\u00edzo. Ainda que os profissionais assinados atravessem per\u00edodos negativos (isso \u00e9 raro) o Algoritmo ainda pode gerar lucro, uma vez que apenas as melhores apostas s\u00e3o selecionadas.\u003C\/p\u003E"
+            }
+        }, {
+            "Pergunta": "Como voc\u00eas enviam as apostas?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "\u003Cp\u003EAtualmente n\u00f3s disponibilizamos os investimentos via whatsapp. Diferente do que acontece no mercado atual, voc\u00ea n\u00e3o precisar\u00e1 entrar em um grupo de telegram ou whatsapp, voc\u00ea receber\u00e1 no seu n\u00famero particular as Tips. Tamb\u00e9m estamos em desenvolvimento para automatiza\u00e7\u00e3o dos envios via APP para Android e iOS.\u003C\/p\u003E"
+            }
+        }, {
+            "Pergunta": "Qual casa de apostas voc\u00eas indicam para come\u00e7ar?",
+            "Resposta": {
+                "type": "textarea",
+                "value": "\u003Cp\u003ENossa equipe utiliza algumas casas de apostas pra conseguirmos sempre as melhores odds, mas umas das casas que mais gostamos \u00e9 a \u003Ca href='\u003C?=$link ?\u003E'\u003E\u003Cu\u003EPinnacle\u003C\/u\u003E\u003C\/a\u003E.\u003C\/p\u003E\u003Cp\u003EEntre as outras casas que tamb\u00e9m usamos est\u00e3o: Betfair,1xbet,Bet365,888sport,Betway,Sportingbt\u003C\/p\u003E\u003Cp\u003EEntretanto, voc\u00ea pode utilizar apenas uma para come\u00e7ar. Neste caso indicamos a \u003Ca href='\u003C?=$link ?\u003E'\u003E\u003Cu\u003EPinnacle\u003C\/u\u003E\u003C\/a\u003E.\u003C\/p\u003E"
             }
         }]
     },
-    "Quem somos?": {
-        "Dados gerais": {
-            "Teste": "blau",
-            "Banner": {
-                "id": "qs_banner",
-                "type": "image",
-                "value": "assets/img/banner.png"
+    "Depoimentos": {
+        "Se\u00e7\u00e3o": {
+            "Resumo": {
+                "id": "depo1",
+                "value": "O que est\u00e3o dizendo sobre n\u00f3s?"
+            },
+            "T\u00edtulo": {
+                "id": "depo2",
+                "value": "Depoimentos"
+            },
+            "Descri\u00e7\u00e3o": {
+                "id": "depo3",
+                "type": "textarea",
+                "value": "Assista e tire suas pr\u00f3prias conclus\u00f5es ..."
+            },
+            "C\u00f3digo do Youtube V\u00eddeo": {
+                "id": "depo.video",
+                "value": "xo90g4mE4fY"
+            }
+        }
+    },
+    "Pre\u00e7os": {
+        "Pre\u00e7os": {
+            "Mensal - Texto": {
+                "id": "mensal.txt",
+                "type": "textarea",
+                "value": "\u003Ch5 style='margin-top:0' class='mb-3'\u003EMensal\u003C\/h5\u003E \u003Ch3\u003E\u003Cspan class='currency'\u003ER$\u003C\/span\u003E 107,00 \u003Cspan class='month'\u003E\/m\u00eas\u003C\/span\u003E\u003C\/h3\u003E \u003Cp class='mb-3'\u003Epago mensalmente\u003C\/p\u003E"
+            },
+            "Mensal - URL": {
+                "id": "mensal.url",
+                "value": "https:\/\/pay.kiwify.com.br\/aISrJui"
+            },
+            "Semestral - Texto": {
+                "id": "sem.txt",
+                "type": "textarea",
+                "value": "\u003Ch3\u003E\u003Cspan class='currency'\u003ER$\u003C\/span\u003E 77,00 \u003Cspan class='month'\u003E\/m\u00eas\u003C\/span\u003E\u003C\/h3\u003E \u003Cp class='mb-3'\u003Epago semestralmente\u003C\/p\u003E"
+            },
+            "Semestral - URL": {
+                "id": "sem.url",
+                "value": "https:\/\/pay.kiwify.com.br\/IqglV0H"
+            },
+            "Anual - Texto": {
+                "id": "anual.txt",
+                "type": "textarea",
+                "value": "\u003Ch5 style='margin-top:0;color:#41cd7d' class='mb-3'\u003EMELHOR ESCOLHA!\u003C\/h5\u003E \u003Ch5 style='margin-top:0;color:#41cd7d' class='mb-3'\u003E(50% OFF)\u003C\/h5\u003E \u003Ch5 style='margin-top:0' class='mb-3'\u003EAnual\u003C\/h5\u003E \u003Ch3\u003E\u003Cspan class='currency'\u003ER$\u003C\/span\u003E 57,00 \u003Cspan class='month'\u003E\/m\u00eas\u003C\/span\u003E\u003C\/h3\u003E \u003Cp class='mb-3'\u003Epago anualmente\u003C\/p\u003E"
+            },
+            "Anual - URL": {
+                "id": "anual.url",
+                "value": "https:\/\/pay.kiwify.com.br\/H0uQxKB"
+            }
+        },
+        "Quanto custaria": {
+            "Resumo": {
+                "id": "simula1",
+                "value": "Se AlienRico N\u00c3O existisse ..."
+            },
+            "T\u00edtulo": {
+                "id": "simula2",
+                "value": "Quanto custaria este servi\u00e7o?"
+            },
+            "Descri\u00e7\u00e3o": {
+                "id": "simula3",
+                "type": "textarea",
+                "value": "Voc\u00ea pode ganhar uma IA e os melhores profissionais do mercado, todos trabalhando pra voc\u00ea lucrar."
+            },
+            "Tabela": {
+                "id": "simula4",
+                "type": "textarea",
+                "value": "\u003Ctable class='table'\u003E \u003Cthead\u003E \u003Ctr\u003E \u003Cth scope='col'\u003E#\u003C\/th\u003E \u003Cth scope='col'\u003EProfissional\u003C\/th\u003E \u003Cth scope='col'\u003EValor mensal\u003C\/th\u003E \u003Cth scope='col'\u003EEm real\u003C\/th\u003E \u003C\/tr\u003E\u003C\/thead\u003E \u003Ctbody\u003E \u003Ctr\u003E \u003Cth scope='row'\u003E01\u003C\/th\u003E \u003Ctd style='text-align:left'\u003E \u003Cimg src='https:\/\/alienrico.com.br\/assets\/images\/icon\/united-kingdom.png' style='max-width:32px' alt='icon'\u003E Tipster - England \u003C\/td\u003E\u003Ctd\u003E 69,00 libras \u003C\/td\u003E\u003Ctd\u003ER$ 497,00 por m\u00eas\u003C\/td\u003E\u003C\/tr\u003E\u003Ctr\u003E \u003Cth scope='row'\u003E02\u003C\/th\u003E \u003Ctd style='text-align:left'\u003E \u003Cimg src='https:\/\/alienrico.com.br\/assets\/images\/icon\/flags.png' style='max-width:32px' alt='icon'\u003E Tipster - Spanish \u003C\/td\u003E\u003Ctd\u003E89,00 euros\u003C\/td\u003E\u003Ctd\u003ER$ 533,00 por m\u00eas\u003C\/td\u003E\u003C\/tr\u003E\u003Ctr\u003E \u003Cth scope='row'\u003E03\u003C\/th\u003E \u003Ctd style='text-align:left'\u003E \u003Cimg src='https:\/\/alienrico.com.br\/assets\/images\/icon\/netherlands.png' style='max-width:32px' alt='icon'\u003E Tipster - Netherlands \u003C\/td\u003E\u003Ctd\u003E119,00 euros\u003C\/td\u003E\u003Ctd\u003ER$ 713,00 por m\u00eas\u003C\/td\u003E\u003C\/tr\u003E\u003Ctr\u003E \u003Cth scope='row'\u003E04\u003C\/th\u003E \u003Ctd style='text-align:left'\u003E \u003Cimg src='https:\/\/alienrico.com.br\/assets\/images\/icon\/uru-flag.png' style='max-width:32px' alt='icon'\u003E Tipster - Uruguay \u003C\/td\u003E \u003Ctd\u003E49,00 d\u00f3lares\u003C\/td\u003E\u003Ctd\u003ER$ 262,00 por m\u00eas\u003C\/td\u003E\u003C\/tr\u003E\u003Ctr\u003E \u003Cth scope='row'\u003E05\u003C\/th\u003E \u003Ctd style='text-align:left'\u003E \u003Cimg src='https:\/\/alienrico.com.br\/assets\/images\/icon\/robot.png' style='max-width:32px' alt='icon'\u003E Intelig\u00eancia Artificial e Infraestrutura \u003C\/td\u003E \u003Ctd\u003E4.746 d\u00f3lares\u003C\/td\u003E\u003Ctd\u003ER$ 23.732,00 por m\u00eas\u003C\/td\u003E\u003C\/tr\u003E\u003C\/tbody\u003E \u003C\/table\u003E"
             }
         }
     }

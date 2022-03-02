@@ -2,6 +2,33 @@
 // CB
 include "global.php";
 
+// MODAL?
+if (@$_GET['modal']) $_SESSION['modal'] = true;
+elseif (@$_GET['no_modal']) unset($_SESSION['modal']);
+
+// FIND KEY
+if (@$_GET['key']) {
+    $key = $_GET['key'];
+    $pageNumber = 1;
+    foreach ($data as $pageName => $page) {
+        $sectionNumber = 1;
+        foreach ($page as $sectionName => $section) {
+            foreach ($section as $element) {
+                if ($element['id'] === $key) {
+                    //echo "$x $pageName $sectionName";
+                    header("Location: ./?p=$pageNumber&section=$sectionNumber&element=$key#goto_$key");
+                    exit;
+                }
+            }
+            $sectionNumber++;
+        }
+        $pageNumber++;
+    }
+    echo $key;
+    //print_r($data);
+    exit;
+}
+
 // GET CURRENT PAGE
 $p = $_GET['p'];
 if (!$p) $p = 1;
@@ -32,7 +59,7 @@ if ($p != "cb") {
 // GET CURRENT PAGE TITLE
 $page = '';
 $x = 0;
-foreach ($data as $k => $v) {
+foreach ($data_full as $k => $v) {
     $x++;
     if ((!$p and $x == 1) or $p == $x) $page = $k;
 }
@@ -47,7 +74,7 @@ if (!$page) $page = ucfirst($p);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="J. W. Balaniuc">
-    <title><?= $conf_id['sys_name'] ?> · NoDB: <?= $page ?></title>
+    <title>[NoDB] <?= $conf['sys_name'] ?> · <?= $page ?></title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="assets/img/logo-ico32.png" />
@@ -94,10 +121,12 @@ if (!$page) $page = ucfirst($p);
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="./">
-                        <img src="assets/img/logo.png" alt="" width="48">
-                        &nbsp; <?= $conf_id['sys_name'] ?> <span class='sm text-muted'> > <?= $page ?></span>
-                    </a>
+                    <?php if (!@$_SESSION['modal']) { ?>
+                        <a class="navbar-brand" href="./live.php">
+                            <img src="assets/img/logo.png" alt="" width="48">
+                            &nbsp; <?= $conf['sys_name'] ?> <span class='sm text-muted'> > <?= $page ?></span>
+                        </a>
+                    <?php } ?>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -105,7 +134,7 @@ if (!$page) $page = ucfirst($p);
                         <ul class="navbar-nav me-auto mb-0 mb-lg-0">
                             <?php
                             $x = 0;
-                            foreach ($data as $k => $v) {
+                            foreach ($data_full as $k => $v) {
                                 $x++;
                                 $active = '';
                                 if ((!$p and $x == 1) or $p == $x) $active = 'active';
@@ -190,9 +219,9 @@ if (!$page) $page = ucfirst($p);
 
             <?php include "pages/$fn_include.php"; ?>
 
-            <p class='text-center mb-5'>
+            <!--<p class='text-center mb-5'>
                 <a href='pages/logout.php' class="w-100">Logout</a>
-            </p>
+            </p>-->
 
 
         </main>
@@ -232,6 +261,23 @@ if (!$page) $page = ucfirst($p);
             });
         </script>
     <?php } ?>
+
+    <script>
+        $(function() {
+            var hash = window.location.hash.substr(1);
+            if (hash) {
+                setTimeout(function() {
+                    $('html, body').animate({
+                        scrollTop: eval($("#" + hash).offset().top - 10)
+                    }, 500);
+                }, 500);
+                setTimeout(function() {
+                    $("#" + hash).find('input:not(.copy)').focus();
+                    $("#" + hash).find('.trumbowyg-editor').focus();
+                }, 500);
+            }
+        });
+    </script>
 
 </body>
 

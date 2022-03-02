@@ -87,5 +87,5 @@ else {
     $log['password'] = $p;
     $_SESSION['logged'] = $log;
 }
-header("Location: ../");
+header("Location: ../live.php");
 exit;

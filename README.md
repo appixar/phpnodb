@@ -22,7 +22,24 @@ Você deverá criar uma senha para uso do Desenvolvedor, e outra para uso do Cli
 
 A senha do Desenvolvedor possui privilégios para alterar a estrutura dos dados JSON.
 
-## Estrutura do site com phpNoDB
+## Estrutura do site com JavaScript
+
+- **site_directory/index.php**
+```
+<!-- Estrutura do site original -->
+<html>
+<head>
+    // Mostrar dados na página
+    <title x-data='titulo'><title>
+</head>
+<body>
+    <p>Olá, visitante!</p>
+    <p>Total de lucros gerados no último mês: <span x-data='lucro'></span></p>
+    ...
+    <script src='phpnodb/phpnodb.js'></script>
+```
+
+## Estrutura do site com PHP
 
 - **site_directory/index.php**
 ```

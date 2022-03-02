@@ -1,10 +1,20 @@
 <?php
-if ($this->html_item_id == 1) {
-    $show = 'show';
-    $collapsed = '';
+if (!@$_GET['section']) {
+    if ($this->html_item_id == 1) {
+        $show = 'show';
+        $collapsed = '';
+    } else {
+        $show = '';
+        $collapsed = 'collapsed';
+    }
 } else {
-    $show = '';
-    $collapsed = 'collapsed';
+    if ($this->html_item_id == $_GET['section']) {
+        $show = 'show';
+        $collapsed = '';
+    } else {
+        $show = '';
+        $collapsed = 'collapsed';
+    }
 }
 ?>
 

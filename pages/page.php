@@ -4,7 +4,7 @@ $level = $p;
 // conf data
 if ($p == 'config') {
     $level = 0;
-    $data = $conf;
+    $data = $conf_full;
 }
 ?>
 

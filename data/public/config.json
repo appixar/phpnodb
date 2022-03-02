@@ -2,11 +2,11 @@
     "Definições": {
         "Nome do site": {
             "id": "sys_name",
-            "value": "My Site"
+            "value": "AlienRico"
         },
         "URL do site": {
             "id": "sys_url",
-            "value": "https://domain.com"
+            "value": "https://alienrico.com.br"
         },
         "Logo NoDB": {
             "id": "sys_logo",

@@ -24,7 +24,7 @@ if (!$_FILES) {
 }
 // max count files
 $total = intval(count(scandir('../data/upload/')) - 2);
-if ($conf_id['sys_up_maxcount'] <= $total) {
+if ($conf['sys_up_maxcount'] <= $total) {
     $_SESSION['cb']['type'] = 'danger';
     $_SESSION['cb']['text'] = 'Limite de imagens excedido.';
     header("Location: {$_SERVER['HTTP_REFERER']}");

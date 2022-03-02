@@ -51,6 +51,7 @@ $content['new'] = $data;
 if ($content['old'] == $content['new']) {
     goto ignore_log;
 }
+//echo $fn_log; exit;
 $content = json_encode($content, true);
 file_put_contents($fn_log, $content);
 if (!is_writeable($fn_log)) {

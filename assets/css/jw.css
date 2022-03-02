@@ -141,6 +141,10 @@ code *,
 
 /* Nav */
 
+.navbar .container-fluid {
+    padding: 0;
+}
+
 .nav-link.active {
     font-weight: 500 !important;
     color: #17aca1 !important;
@@ -205,4 +209,31 @@ code *,
 
 .flex .item:hover {
     background: #eee;
+}
+
+
+/* ADJUST SMALL SIZES */
+
+@media (max-width: 500px) {
+    body {
+        font-size: .75rem;
+    }
+    input:not(.copy),
+    textarea,
+    button {
+        font-size: .9rem !important;
+    }
+    .navbar-brand {
+        font-size: .9rem;
+    }
+    .navbar-brand img {
+        width: 32px;
+    }
+    .accordion-button {
+        padding: 12px !important;
+    }
+    .navbar-collapse {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
 }

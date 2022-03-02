@@ -15,11 +15,11 @@ include __DIR__ . '/' . $fn_pass;
 include __DIR__ . '/' . $fn_pass_dev;
 
 // GET CONFIG
-$conf = json_decode(file_get_contents(__DIR__ . '/' . $fn_conf), true); // php array
-$conf_id = phpNoDB($conf);
+$conf_full = json_decode(file_get_contents(__DIR__ . '/' . $fn_conf), true); // php array
+$conf = phpNoDB($conf_full);
 $_SESSION['current_conf'] = file_get_contents(__DIR__ . '/' . $fn_conf); // json
 
 // GET DATA
-$data = json_decode(file_get_contents(__DIR__ . '/' . $fn_data), true); // php array
-$data_id = phpNoDB($data);
+$data_full = json_decode(file_get_contents(__DIR__ . '/' . $fn_data), true); // php array
+$data = phpNoDB($data_full);
 $_SESSION['current_data'] = file_get_contents(__DIR__ . '/' . $fn_data); // json
