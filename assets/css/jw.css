@@ -223,6 +223,12 @@ code *,
     button {
         font-size: .9rem !important;
     }
+    .dropdown-item {
+        font-size: .85rem;
+    }
+    .nav-item {
+        font-size: .85rem;
+    }
     .navbar-brand {
         font-size: .9rem;
     }

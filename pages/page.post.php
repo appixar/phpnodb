@@ -29,7 +29,7 @@ $data_array = cleanData($_POST);
 //================================
 $data_array_old = json_decode(file_get_contents("../" . $fn_data), true);
 $data_array = array_merge($data_array_old, $data_array);
-$data = json_encode($data_array, true);
+$data = json_encode($data_array, JSON_UNESCAPED_UNICODE);
 //echo $data; exit;
 if (!is_writeable("../$fn_data")) {
     $_SESSION['cb']['type'] = 'danger';
@@ -52,7 +52,7 @@ if ($content['old'] == $content['new']) {
     goto ignore_log;
 }
 //echo $fn_log; exit;
-$content = json_encode($content, true);
+$content = json_encode($content, JSON_UNESCAPED_UNICODE);
 file_put_contents($fn_log, $content);
 if (!is_writeable($fn_log)) {
     $_SESSION['cb']['type'] = 'warning';

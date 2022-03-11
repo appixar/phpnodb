@@ -31,7 +31,7 @@ if (!$_SESSION['logged']) {
 </head>
 
 <body>
-    <iframe id='site' src='<?= $conf['sys_url'] ?>/indexjs.php?phpnodb=1'></iframe>
+    <iframe id='site' src='<?= $conf['sys_url'] ?>'></iframe>
 
     <div id="dialog" title="Carregando...">
         <iframe id='editor' src='index.php?modal=1'></iframe>
@@ -48,7 +48,7 @@ if (!$_SESSION['logged']) {
                 maxHeight: 1000,
                 minWidth: 350,
                 minHeight: 600,
-                width: 410,
+                width: 440,
                 height: 600,
                 //modal: true,
                 close: function() {
@@ -70,9 +70,11 @@ if (!$_SESSION['logged']) {
                 if (maximized) {
                     $('#dialog').hide();
                     $('#site').contents().find('#phpnodb_css').remove();
+                    $('#site').contents().find('html').removeClass('maximized');
                     maximized = false;
                 } else {
                     $('#dialog').show();
+                    $('#site').contents().find('html').addClass('maximized');
                     siteCss();
                     maximized = true;
                 }
@@ -94,9 +96,14 @@ if (!$_SESSION['logged']) {
             // IFRAME SITE
             //========================================
             $('#site').on('load', function() {
-                $(this).contents().find("*[x-data]").click(function() {
+                var site = $(this);
+                site.contents().find('html').addClass('maximized');
+                site.contents().find("*[x-data]").click(function(e) {
+                    if (maximized) e.preventDefault();
                     var key = $(this).attr('x-data');
                     $('#editor').attr('src', 'index.php?modal=1&key=' + key);
+                    site.contents().find("*[x-data]").removeClass('active');
+                    $(this).addClass('active');
                 });
                 siteCss();
             });

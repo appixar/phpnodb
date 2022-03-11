@@ -55,23 +55,34 @@ function getIp()
     return $ip;
 }
 
-function phpNoDB($array)
+function phpNoDB($pages)
 {
     $return = array();
-    // Home
-    foreach ($array as $k => $v) {
-        if (is_array($v)) {
-            // Dados gerais
-            foreach ($v as $k_ => $v_) {
-                if ($k_ == 'id' and !is_array($v_)) $return[$v_] = $v['value'];
-                if (is_array($v_)) {
-                    // Conteudo da Pagina
-                    foreach ($v_ as $k__ => $v__) {
-                        if ($k__ == 'id' and !is_array($v__)) $return[$v__] = $v_['value'];
-                        if (is_array($v__)) {
-                            // id
-                            foreach ($v__ as $k___ => $v___) {
-                                if ($k___ == 'id' and !is_array($v___)) $return[$v___] = $v__['value'];
+    // Pages
+    foreach ($pages as $pageName => $page) {
+        if (is_array($page)) {
+            // Sections
+            foreach ($page as $sectionName => $section) {
+                if ($sectionName == 'id' and !is_array($section)) $return[$section] = $page['value'];
+                if (is_array($section)) {
+                    // Elements
+                    foreach ($section as $elementName => $element) {
+                        // Single Element
+                        if ($elementName == 'id' and !is_array($element)) $return[$element] = $section['value'];
+                        if (is_array($element)) {
+                            foreach ($element as $itemName => $item) {
+                                if ($itemName == 'id' and !is_array($item)) $return[$item] = $element['value'];
+                            }
+                        }
+                        // List Element
+                        if (is_numeric($elementName) and is_array($element)) {
+                            foreach ($element as $itemName => $item) {
+                                if (is_array($item)) {
+                                    foreach ($item as $propName => $prop) {
+                                        if ($propName == 'id') $return[$prop][$elementName] = $item['value'];
+                                    }
+                                }
+                                
                             }
                         }
                     }
@@ -79,7 +90,7 @@ function phpNoDB($array)
             }
         }
     }
-    $return = array_merge($array, $return);
+    $return = array_merge($pages, $return);
     return $return;
 }
 
@@ -102,17 +113,30 @@ function cleanData($array)
                             foreach ($v2 as $k3 => $v3) {
                                 if (is_array($v3)) {
                                     foreach ($v3 as $k4 => $v4) {
-                                        $data_array[$k0][$k1][$k2][$k3][$k4] = strip_tags($v4, $tags);
+                                        //$data_array[$k0][$k1][$k2][$k3][$k4] = strip_tags($v4, $tags);
+                                        $data_array[$k0][$k1][$k2][$k3][$k4] = $v4;
                                     }
-                                } else $data_array[$k0][$k1][$k2][$k3] = strip_tags($v3, $tags);
+                                } else {
+                                    //$data_array[$k0][$k1][$k2][$k3] = strip_tags($v3, $tags);
+                                    $data_array[$k0][$k1][$k2][$k3] = $v3;
+                                }
                             }
                         }
                         // Dont have key
-                        else $data_array[$k0][$k1][$k2] = strip_tags($v2, $tags);
+                        else {
+                            //$data_array[$k0][$k1][$k2] = strip_tags($v2, $tags);
+                            $data_array[$k0][$k1][$k2] = $v2;
+                        }
                     }
-                } else $data_array[$k0][$k1] = strip_tags($v1, $tags);
+                } else {
+                    //$data_array[$k0][$k1] = strip_tags($v1, $tags);
+                    $data_array[$k0][$k1] = $v1;
+                }
             }
-        } else $data_array[$k0] = strip_tags($v0, $tags);
+        } else {
+            //$data_array[$k0] = strip_tags($v0, $tags);
+            $data_array[$k0] = $v0;
+        }
     }
     return $data_array;
 }

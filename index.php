@@ -14,10 +14,17 @@ if (@$_GET['key']) {
         $sectionNumber = 1;
         foreach ($page as $sectionName => $section) {
             foreach ($section as $element) {
+                // Single Element
                 if ($element['id'] === $key) {
-                    //echo "$x $pageName $sectionName";
                     header("Location: ./?p=$pageNumber&section=$sectionNumber&element=$key#goto_$key");
                     exit;
+                }
+                // List Element
+                foreach ($element as $itemName => $item) {
+                    if ($item['id'] === $key) {
+                        header("Location: ./?p=$pageNumber&section=$sectionNumber&element=$key&noScroll=1#goto_$key");
+                        exit;
+                    }
                 }
             }
             $sectionNumber++;
@@ -263,20 +270,25 @@ if (!$page) $page = ucfirst($p);
     <?php } ?>
 
     <script>
-        $(function() {
-            var hash = window.location.hash.substr(1);
-            if (hash) {
-                setTimeout(function() {
-                    $('html, body').animate({
-                        scrollTop: eval($("#" + hash).offset().top - 10)
+        <?php if (@!$_GET['noScroll']) { ?>
+            $(function() {
+                var hash = window.location.hash.substr(1);
+                if (hash) {
+                    setTimeout(function() {
+                        try {
+                            var top = $("#" + hash).offset().top;
+                            $('html, body').animate({
+                                scrollTop: eval(top - 10)
+                            }, 500);
+                        } catch (e) {}
                     }, 500);
-                }, 500);
-                setTimeout(function() {
-                    $("#" + hash).find('input:not(.copy)').focus();
-                    $("#" + hash).find('.trumbowyg-editor').focus();
-                }, 500);
-            }
-        });
+                    setTimeout(function() {
+                        $("#" + hash).find('input:not(.copy)').focus();
+                        $("#" + hash).find('.trumbowyg-editor').focus();
+                    }, 500);
+                }
+            });
+        <?php } ?>
     </script>
 
 </body>

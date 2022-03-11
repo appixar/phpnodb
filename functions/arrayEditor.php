@@ -66,18 +66,18 @@ class arrayEditor
     //====================================================
     // Build items
     //====================================================
-    private function buildItems($array)
+    private function buildItems($pages)
     {
         //====================================================
         // 1. Accordion title
         //====================================================
-        foreach ($array as $k => $v) {
+        foreach ($pages as $sectionName => $section) {
 
             // fix first key
             if ($this->first_key) {
                 //echo 1; exit;
-                $key = "[$k]";
-            } else $key = $k;
+                $key = "[$sectionName]";
+            } else $key = $sectionName;
 
             $this->html_item_id++;
 
@@ -89,44 +89,44 @@ class arrayEditor
             //====================================================
             // 2. Field label
             //====================================================
-            foreach ($v as $k_ => $v_) { // loop 1
+            foreach ($section as $elementName => $element) { // loop 1
                 //====================================================
                 // 3. Dynamic multidimensional fields (list)
                 //====================================================
-                if (is_numeric($k_) and is_array($v_)) {
+                if (is_numeric($elementName) and is_array($element)) {
                     $this->$dynMulti++;
-                    $this->html .= "<div id='card_multi_{$this->html_item_id}_$k_' class='card mb-3' multi-item-id='{$this->html_item_id}' multi-array-id='$k_'>";
-                    $this->html .= "<div class='card-header'>Item <span class='multi-item-id-text'>$k_</span>";
+                    $this->html .= "<div id='card_multi_{$this->html_item_id}_$elementName' class='card mb-3' multi-item-id='{$this->html_item_id}' multi-array-id='$elementName'>";
+                    $this->html .= "<div class='card-header'>Item <span class='multi-item-id-text'>$elementName</span>";
                     $this->html .= "<div style='float:right'>";
                     $this->html .= "&nbsp;<a href='#' class='multi-item-down btn btn-secondary btn-sm'><i class='fa fa-arrow-down'></i></a>";
                     $this->html .= "&nbsp;<a href='#' class='multi-item-up btn btn-secondary btn-sm'><i class='fa fa-arrow-up'></i></a>";
                     $this->html .= "&nbsp;<a href='#' class='multi-item-del btn btn-danger btn-sm'><i class='fa fa-times'></i></a>";
                     $this->html .= "</div></div><div class='card-body'>";
-                    foreach ($v_ as $k__ => $v__) {
+                    foreach ($element as $itemName => $item) {
                         //====================================================
                         // 3. a) Field parameters
                         //====================================================
-                        //$label = $k__ . " <span class='text-muted multi_item_id'>$k_</span>";
-                        $label = $k__;
-                        $value = $v__;
+                        //$label = $itemName . " <span class='text-muted multi_item_id'>$elementName</span>";
+                        $label = $itemName;
+                        $value = $item;
                         $id = '';
                         $type = '';
-                        $name = "{$this->first_key}{$key}[$k_][$k__]";
+                        $name = "{$this->first_key}{$key}[$elementName][$itemName]";
                         //
-                        if (is_array($v__)) {
-                            $type = $v__['type'];
-                            $value = $v__['value'];
-                            $id = $v__['id'];
+                        if (is_array($item)) {
+                            $type = $item['type'];
+                            $value = $item['value'];
+                            $id = $item['id'];
                             $name .= "[value]";
-                            foreach ($v__ as $k___ => $v___) { // loop 2
+                            foreach ($item as $itemName_ => $item_) { // loop 2
                                 //====================================================
                                 // 3. b) Simple parameters (id, value, type, etc)
                                 // Save parameters in hidden
                                 //====================================================
-                                if ($k___ != "value") $this->html .= "<input type='hidden' name='{$this->first_key}{$key}[$k_][{$k__}][{$k___}]' value='$v___' />";
+                                if ($itemName_ != "value") $this->html .= "<input type='hidden' name='{$this->first_key}{$key}[$elementName][{$itemName}][{$itemName_}]' value='$item_' />";
                             }
                         }
-                        $array_id = $k_;
+                        $array_id = $elementName;
                         $this->makeInput($type, $label, $value, $name, $id, $array_id);
                     } // foreach
                     $this->html .= "</div></div>";
@@ -139,24 +139,24 @@ class arrayEditor
                     //====================================================
                     // 4. a) Field parameters
                     //====================================================
-                    $label = $k_;
-                    $value = $v_;
+                    $label = $elementName;
+                    $value = $element;
                     $id = '';
                     $type = '';
-                    $name = "{$this->first_key}{$key}[$k_]";
+                    $name = "{$this->first_key}{$key}[$elementName]";
                     //
-                    if (is_array($v_)) {
-                        $type = $v_['type'];
-                        $value = $v_['value'];
-                        $id = $v_['id'];
+                    if (is_array($element)) {
+                        $type = $element['type'];
+                        $value = $element['value'];
+                        $id = $element['id'];
                         $name .= "[value]";
 
-                        foreach ($v_ as $k__ => $v__) { // loop 2
+                        foreach ($element as $itemName => $item) { // loop 2
                             //====================================================
                             // 5. b) Simple parameters (id, value, type, etc)
                             // Save parameters in hidden
                             //====================================================
-                            if ($k__ != "value") $this->html .= "<input type='hidden' name='{$this->first_key}{$key}[{$k_}][{$k__}]' value='$v__' />";
+                            if ($itemName != "value") $this->html .= "<input type='hidden' name='{$this->first_key}{$key}[{$elementName}][{$itemName}]' value='$item' />";
                         }
                     }
                     $this->makeInput($type, $label, $value, $name, $id);
@@ -175,6 +175,9 @@ class arrayEditor
     }
     private function makeInput($type, $label, $value, $name, $id = false, $array_id = false)
     {
+        // id area (auto scroll)
+        $this->html .= "<div id='goto_$id'>";
+
         // copy & popover (tooltip)
         if ($_SESSION['logged']['dev']) {
             // fix first key
@@ -184,11 +187,12 @@ class arrayEditor
             $name_var = str_replace("[", "['", $name_var);
             $name_var = str_replace("]", "']", $name_var);
             $name_var = str_replace("''", $array_id, $name_var);
-            // id area (auto scroll)
-            $this->html .= "<div id='goto_$id'>";
             // copy
             if (!$id) $copy = '<?= $data' . $name_var . ' ?>';
-            else $copy = '<?= $data' . "['$id'] ?>";
+            else {
+                if (is_numeric($array_id)) $copy = '<?= $data' . "['$id'][$array_id] ?>";
+                else $copy = '<?= $data' . "['$id'] ?>";
+            }
             $this->html .= '<input type="text" readonly="true" class="copy text-secondary" value="' . $copy . '" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Copiado" />';
         }
         //=====================================

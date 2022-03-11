@@ -1,12 +1,12 @@
 *[x-data] {
-    border: 1px dashed red;
+    border: 1px dashed red !important;
 }
 
 *[x-data]:hover {
     cursor: pointer !important;
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 10px red !important;
 }
 
 *[x-data].active {
-    background: rgba(255, 0, 0, .25);
+    background: rgba(255, 0, 0, .25) !important;
 }
